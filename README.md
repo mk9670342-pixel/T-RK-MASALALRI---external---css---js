@@ -28,6 +28,3 @@ Meryem Küçük
 
 ## Ders
 Programlamaya Giriş
-
-## Orijinal Proje
-[CodePen Bağlantısı](https://codepen.io/editor/Meryem-K-k/pen/01a202ba-762
