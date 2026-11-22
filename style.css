@@ -1,0 +1,212 @@
+
+/* Rapor Tasarım Kararları ile %100 Uyumlu Palette */
+:root {
+    --bg-krem: #F9F6F0;
+    --main-lacivert: #14325C;
+    --accent-kahve: #5C4033;
+    --card-white: #FFFFFF;
+    --text-dark: #2D3748;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-krem);
+    color: var(--text-dark);
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+/* Header / Başlık */
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    color: var(--main-lacivert);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+
+header p {
+    color: var(--accent-kahve);
+    font-size: 1.15rem;
+    font-style: italic;
+}
+
+/* Ana Konteynır */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* 4 Üstte, 4 Altta Grid Yapısı */
+.masal-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 50px;
+}
+
+/* Estetik Kutucuk Tasarımları */
+.masal-kart {
+    background-color: var(--card-white);
+    border: 1px solid rgba(92, 64, 51, 0.18);
+    border-radius: 16px;
+    padding: 40px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+    box-shadow: 0 4px 12px rgba(20, 50, 92, 0.04);
+    user-select: none;
+}
+
+.masal-kart:hover {
+    transform: translateY(-6px);
+    border-color: var(--main-lacivert);
+    box-shadow: 0 12px 24px rgba(20, 50, 92, 0.12);
+    background-color: #FFFFFF;
+}
+
+.masal-baslik {
+    color: var(--main-lacivert);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.oku-link {
+    color: var(--accent-kahve);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.masal-kart:hover .oku-link {
+    color: var(--main-lacivert);
+}
+
+/* Açılır Masal Penceresi (Modal) */
+.modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(20, 50, 92, 0.45);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Modal Açık Durumu */
+.modal-bg.aktif {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-icerik {
+    background-color: var(--bg-krem);
+    border: 2px solid var(--accent-kahve);
+    border-radius: 20px;
+    max-width: 650px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 40px;
+    position: relative;
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.25);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal-bg.aktif .modal-icerik {
+    transform: scale(1);
+}
+
+.kapat-btn {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    font-size: 2.2rem;
+    background: none;
+    border: none;
+    color: var(--accent-kahve);
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.kapat-btn:hover {
+    color: var(--main-lacivert);
+}
+
+.modal-baslik {
+    color: var(--main-lacivert);
+    font-size: 1.9rem;
+    margin-bottom: 12px;
+    padding-right: 30px;
+}
+
+.modal-cizgi {
+    border: 0;
+    height: 1px;
+    background: var(--accent-kahve);
+    opacity: 0.25;
+    margin-bottom: 24px;
+}
+
+.modal-metin {
+    font-size: 1.08rem;
+    line-height: 1.85;
+    color: var(--text-dark);
+    white-space: pre-line;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: var(--accent-kahve);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Mobil ve Tablet Uyumluluğu (Duyarlı Tasarım) */
+@media (max-width: 960px) {
+    .masal-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 520px) {
+    .masal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+}

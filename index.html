@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dilden Dile Türk Masalları</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Dilden Dile Türk Masalları</h1>
+        <p>Anadolu ve Türk Coğrafyasından Seçme 8 Geleneksel Anlatı</p>
+    </header>
+
+    <main class="container">
+        <div class="masal-grid">
+
+            <div class="masal-kart" onclick="masalAc(1)">
+                <h2 class="masal-baslik">İbikli Horoz</h2>
+                <span class="oku-link">Masalı Oku &rarr;</span>
+            </div>
+
+            <div class="masal-kart" onclick="masalAc(2)">
+                <h2 class="masal-baslik">Tembel Kız</h2>
+                <span class="oku-link">Masalı Oku &rarr;</span>
+            </div>
+
+            <div class="masal-kart" onclick="masalAc(3)">
+                <h2 class="masal-baslik">Keloğlan ile Yılan</h2>
+                <span class="oku-link">Masalı Oku &rarr;</span>
+            </div>
+
+            <div class="masal-kart" onclick="masalAc(4)">
+                <h2 class="masal-baslik">Kabak Gelin</h2>
+                <span class="oku-link">Masalı Oku &rarr;</span>
+            </div>
+
+            <div class="masal-kart" onclick="masalAc(5)">
+                <h2 class="masal-baslik">Üç Haylaz Masalı</h2>
+                <span class="oku-link">Masalı Oku &rarr;</span>
+            </div>
+
+            <div class="masal-kart" onclick="masalAc(6)">
+                <h2 class="masal-baslik">Kerem ile Aslı</h2>
+                <span class="oku-link">Masalı Oku &rarr;</span>
+            </div>
+
+            <div class="masal-kart" onclick="masalAc(7)">
+                <h2 class="masal-baslik">Kalyanam Kara Papam Kara</h2>
+                <span class="oku-link">Masalı Oku &rarr;</span>
+            </div>
+
+            <div class="masal-kart" onclick="masalAc(8)">
+                <h2 class="masal-baslik">Gökten Düşen Üç Elma</h2>
+                <span class="oku-link">Masalı Oku &rarr;</span>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Detay Penceresi (Modal Pop-up) -->
+    <div class="modal-bg" id="masalModal" onclick="disariTiklandi(event)">
+        <div class="modal-icerik">
+            <button class="kapat-btn" onclick="masalKapat()">&times;</button>
+            <h2 class="modal-baslik" id="modalBaslik">Masal Başlığı</h2>
+            <hr class="modal-cizgi">
+            <div class="modal-metin" id="modalMetin">Masal içeriği...</div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Programlamaya Giriş Vize Projesi — Görsel İletişim Tasarımı</p>
+    </footer>
+
+</body>
+</html>
+
